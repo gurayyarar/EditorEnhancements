@@ -1,5 +1,5 @@
-import { IExtensionCommand } from "../interfaces/extensionCommand";
-import { Utils } from "../utils";
+import { IExtensionCommand } from "../interfaces/IExtensionCommand";
+import { Utils } from "../Utils";
 
 export class CommandHelpers {
     getAllCommands(): IExtensionCommand[] {
@@ -32,7 +32,7 @@ export class CommandHelpers {
         return commands;
     }
 
-    getCommandResult(selection: string, cmd: string):string {
+    getCommandResult(selection: string, cmd: string): string {
         return Utils[cmd](selection);
     }
 }
